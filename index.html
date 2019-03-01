@@ -232,7 +232,7 @@ code, .password {
     <p><b> Disclaimer:</b> This site is not officially endorsed by or does not have any affiliation with NIST.</p>
 <h2 id="usage">Usage</h2>
 <p> By default, four-word lowercase passphrases are generated because they are secure and memorable. But most password policies require the inclusion of LUDS (Lowercase and Uppercase letters, Digits and Symbols). In which case, selecting 'Sentence case' and ticking 'Digits' and then generating passphrases would satisfy the requirements (since spaces are symbols as well).</p>
-<p>The approximate crack time is based on the assumption of an offline attack which involves multiple attackers, proper user-unique salting and a slow hash function with moderate work factor, such as bcrypt, scrypt or PBKDF2. Namely, it uses
+<p>The approximate crack time is based on the assumption of an offline attack which involves multiple attackers, proper user-unique salting and a slow hash function with moderate work factor, such as bcrypt, scrypt or PBKDF2 and assumes 10,000 guesses per second. Namely, it uses
   'offline_slow_hashing_1e4_per_second' of zxcvbn. If you want to know more about the usage, check out the <a href="https://github.com/dropbox/zxcvbn#usage" target="_blank" rel="noopener noreferrer">official zxcvbn usage documentation.</a>
 </p>   
   <h2 id="why-should-i-use-a-random-passphrase-">Why should I use a random passphrase?</h2>
