@@ -6401,7 +6401,7 @@ function setStyleFromWordNumber(passwordField, numberOfWords) {
   var newSize = baseSize * (4/numberOfWords);
  if (wordcase == 'uppercase' && numberOfWords == 10)
         newSize -= 2.5;
- else if (wordcase == 'uppercase')
+ else if (wordcase == 'uppercase'||wordcase == 'sentence-case')
         newSize -= 10;
    else
         newSize = baseSize * (4/numberOfWords);
@@ -6429,7 +6429,7 @@ else if (document.getElementById('sentence-case').checked){
      wordcase = 'other';
 if (document.getElementById('digits').checked){
     var array2 = new Uint8Array(1);
-    passwordField.value += crypto.getRandomValues(array2);
+    passwordField.value += my_crypto.getRandomValues(array2); 
 }
 var noOfCharacters = passwordField.value.length;
   document.getElementById('no-of-characters').innerHTML = noOfCharacters;
