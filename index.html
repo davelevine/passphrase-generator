@@ -6399,11 +6399,11 @@ var wordcase = 'lowercase';
 function setStyleFromWordNumber(passwordField, numberOfWords) {
   var baseSize = '40';
   var newSize = baseSize * (4/numberOfWords);
- if (wordcase == 'uppercase' && numberOfWords == 10)
+      if (wordcase == 'uppercase' && numberOfWords == 10)
         newSize -= 2.5;
- else if (wordcase == 'uppercase'||wordcase == 'sentence-case')
+      else if (wordcase == 'uppercase'||wordcase == 'sentence-case' && numberOfWords == 4 || wordcase == 'sentence-case' && numberOfWords == 5)
         newSize -= 10;
-   else
+      else
         newSize = baseSize * (4/numberOfWords);
   passwordField.setAttribute('style', 'font-size: ' + newSize + 'px;');
 }    
